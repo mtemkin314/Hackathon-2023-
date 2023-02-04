@@ -18,3 +18,20 @@ document.querySelector("#close").addEventListener("click", function(){
          document.querySelector(".popup").style.display = "none";
     }
 });
+
+
+document.querySelector("#new_movie_input").addEventListener("input",function() {
+    let movie_title = document.querySelector("#new_movie_input").value;
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'f3b20f69a3msh9eb55a9e7877f48p1e5b9ajsn46d4a1ca307a',
+            'X-RapidAPI-Host': 'imdb-movies-web-series-etc-search.p.rapidapi.com'
+        }
+    };
+    
+    fetch('https://imdb-movies-web-series-etc-search.p.rapidapi.com/thegodfather.json', options)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
+});
