@@ -14,7 +14,7 @@ body{
     display: none; 
     text-align: center;
 }
-.popup button{
+/*.popup button{
     display: block;
     margin:  0 0 20px auto;
     background-color: transparent;
@@ -27,7 +27,7 @@ body{
     border: none;
     outline: none;
     cursor: pointer;
-}
+}*/
 .popup h2{
   margin-top: -20px;
 }
@@ -37,7 +37,7 @@ body{
     margin: 20px 0;
     line-height: 25px;
 }
-a{
+.popup button{
     display: block;
     width: 150px;
     position: relative;
