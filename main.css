@@ -1,11 +1,11 @@
 body{
     /*background-color: #0855ae;*/
-   /* background-image: url("https://img.freepik.com/free-vector/seamless-pattern-with-cinema-elements_225004-1154.jpg");*/
+    background-image: url("https://img.freepik.com/free-vector/seamless-pattern-with-cinema-elements_225004-1154.jpg");
 
 }
-img{
+/*img{
     opacity: 0.4;
-}
+} */
 .popup{
     background-color: #ffffff;
     width: 420px;
