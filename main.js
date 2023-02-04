@@ -10,5 +10,11 @@ window.addEventListener("load", function(){
 
 
 document.querySelector("#close").addEventListener("click", function(){
-    document.querySelector(".popup").style.display = "none";
+    if(document.getElementById('new_user_name').value == ""){
+        alert("Input a Username")
+     }else if(document.getElementById('new_birthdate').value == ""){
+        alert("Input a Birth Year") 
+    }else{
+         document.querySelector(".popup").style.display = "none";
+    }
 });
