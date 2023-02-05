@@ -42,7 +42,7 @@ document.querySelector("#new_movie_input").addEventListener("keydown",function()
         list.map((item) =>{
             const movie_name = item.l
             const poster =item.i.imageUrl
-            const movie = '<button onclick = "add_movie()" style="color: blue;text-decoration: underline;">'+movie_name+'</button><br><img src = "'+poster+'" style="width:80px;">'
+            const movie = '<button onclick = "add_movie(event)" style="color: blue;text-decoration: underline;">'+movie_name+'</button><br><img src = "'+poster+'" style="width:80px;">'
             const new_movie = document.createElement("li")
             new_movie.innerHTML = movie;            
             document.getElementById("result_list").append(new_movie)
@@ -57,8 +57,10 @@ document.querySelector("#new_movie_input").addEventListener("keydown",function()
 
 });
 
-function add_movie(){
-    
+function add_movie(e){
+   
+    const movie_name = e.l
+    const poster = e.i.imageUrl
     const movie = '<button onclick = "add_movie" style="color: blue;text-decoration: underline;">'+movie_name+'</button><br><img src = "'+poster+'" style="width:80px;">'
     const new_movie = document.createElement("li")
     new_movie.innerHTML = movie;            
