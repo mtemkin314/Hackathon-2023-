@@ -18,11 +18,15 @@
     left: 0px;
     opacity: 0.65;
 }
-.demo-wrap h1{
-    color: #000000;
-    text-align: left;
-    opacity: 1;
+
+
+.demo-content{
+   position:absolute;
+   top: 8px;
+   left: 16px;
+   opacity: 1.0;
 }
+
 .popup{
     background-color: #ffffff;
     width: 420px;

@@ -16,6 +16,8 @@ document.querySelector("#close").addEventListener("click", function(){
         alert("Input a Birth Year") 
     }else{
          document.querySelector(".popup").style.display = "none";
+         let name = document.getElementById('new_user_name').value
+         document.getElementById("name").innerHTML = name;
     }
 });
 
