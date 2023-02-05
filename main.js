@@ -22,8 +22,8 @@ document.querySelector("#close").addEventListener("click", function(){
 
 document.querySelector("#new_movie_input").addEventListener("input",function() {
     let movie_title = document.querySelector("#new_movie_input").value;
-    let response
-   
+    
+   if(movie_title != ""){
     const options = {
         method: 'GET',
         headers: {
@@ -36,5 +36,8 @@ document.querySelector("#new_movie_input").addEventListener("input",function() {
         
         .then(response => console.log(response))
         .catch(err => console.error(err));
-    
+}
+
+
+
 });
