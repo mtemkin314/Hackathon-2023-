@@ -43,7 +43,9 @@ document.querySelector("#new_movie_input").addEventListener("input",function() {
             const movie_name = item.l
             const poster =item.i.imageUrl
             const movie = '<li><h2>${movie_name}</h2><img src = "${poster}"> </li>'
-            
+            const new_movie = document.createElement("search_list_item")
+            new_movie.
+            document.getElementById("search_list").append(new_movie)
 
         });
 
