@@ -1,11 +1,28 @@
-body{
-    /*background-color: #0855ae;*/
-    background-image: url("https://img.freepik.com/free-vector/seamless-pattern-with-cinema-elements_225004-1154.jpg");
-
+.demo-wrap {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-/*img{
-    opacity: 0.4;
-} */
+ 
+  .demo-wrap::before{
+    content: "";
+    background-image: url("https://img.freepik.com/free-vector/seamless-pattern-with-cinema-elements_225004-1154.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.65;
+}
+.demo-wrap h1{
+    color: #000000;
+    text-align: left;
+    opacity: 1;
+}
 .popup{
     background-color: #ffffff;
     width: 420px;
@@ -54,3 +71,4 @@ body{
     text-decoration: none;
     padding: 8px 0;
 }
+
