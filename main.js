@@ -22,7 +22,7 @@ document.querySelector("#close").addEventListener("click", function(){
 });
 
 
-document.querySelector("#new_movie_input").addEventListener("input",function() {
+document.querySelector("#new_movie_input").addEventListener("keydown",function() {
     let movie_title = document.querySelector("#new_movie_input").value;
     
    if(movie_title != ""){
@@ -38,14 +38,14 @@ document.querySelector("#new_movie_input").addEventListener("input",function() {
         .then(response => response.json())
        .then(response =>{
         const list = response.d
-
+        document.getElementById("result_list").innerHTML = "";
         list.map((item) =>{
             const movie_name = item.l
             const poster =item.i.imageUrl
-            const movie = '<li><h2>${movie_name}</h2><img src = "${poster}"> </li>'
-            const new_movie = document.createElement("search_list_item")
-            new_movie.
-            document.getElementById("search_list").append(new_movie)
+            const movie = '<h2 style="color: blue;text-decoration: underline;">'+movie_name+'</h2><img src = "'+poster+'" style="width:80px;">'
+            const new_movie = document.createElement("li")
+            new_movie.innerHTML = movie;            
+            document.getElementById("result_list").append(new_movie)
 
         });
 
