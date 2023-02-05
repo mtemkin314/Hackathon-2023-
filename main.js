@@ -22,7 +22,7 @@ document.querySelector("#close").addEventListener("click", function(){
 
 document.querySelector("#new_movie_input").addEventListener("input",function() {
     let movie_title = document.querySelector("#new_movie_input").value;
-    let response_array
+    let response
    
     const options = {
         method: 'GET',
@@ -34,7 +34,7 @@ document.querySelector("#new_movie_input").addEventListener("input",function() {
     let fetch_string = 'https://imdb-movies-web-series-etc-search.p.rapidapi.com/' + movie_title + '.json';
     fetch(fetch_string, options)
         
-        .then(response => response_array)
+        .then(response => console.log(response))
         .catch(err => console.error(err));
-
+    
 });
