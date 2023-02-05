@@ -42,7 +42,7 @@ document.querySelector("#new_movie_input").addEventListener("keydown",function()
         list.map((item) =>{
             const movie_name = item.l
             const poster =item.i.imageUrl
-            const movie = '<h2 style="color: blue;text-decoration: underline;">'+movie_name+'</h2><img src = "'+poster+'" style="width:80px;">'
+            const movie = '<button style="color: blue;text-decoration: underline;">'+movie_name+'</button><br><img src = "'+poster+'" style="width:80px;">'
             const new_movie = document.createElement("li")
             new_movie.innerHTML = movie;            
             document.getElementById("result_list").append(new_movie)
