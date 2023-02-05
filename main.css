@@ -9,6 +9,7 @@
  
   .demo-wrap::before{
     content: "";
+    box-shadow: inset 0 0 0 1000px rgba(9, 144, 234, 0.4);
     background-image: url("https://img.freepik.com/free-vector/seamless-pattern-with-cinema-elements_225004-1154.jpg");
     background-size: cover;
     position: fixed;
