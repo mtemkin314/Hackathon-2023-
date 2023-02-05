@@ -35,11 +35,28 @@ document.querySelector("#new_movie_input").addEventListener("input",function() {
     };
     let fetch_string = 'https://imdb-movies-web-series-etc-search.p.rapidapi.com/' + movie_title + '.json';
     fetch(fetch_string, options)
+        .then(response => response.json())
+       .then(response =>{
+        const list = response.d
+
+        list.map((item) =>{
+            const movie_name = item.l
+            const poster =item.i.imageUrl
+            const movie = '<li><h2>${movie_name}</h2><img src = "${poster}"> </li>'
+            
+
+        });
+
         
-        .then(response => console.log(response))
+       } )
         .catch(err => console.error(err));
 }
 
 
-
 });
+
+
+
+
+
+
